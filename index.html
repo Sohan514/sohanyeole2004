@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Code</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="screen active">
+        <div class="container">
+            <div class="logo-container">
+                <img src="your-logo-path.png" alt="Beyond Code Logo" class="logo">
+            </div>
+            <h1 class="welcome-text">WELCOME</h1>
+            <div class="buttons-container">
+                <a href="#" class="btn">Sign In</a>
+                <a href="#" class="btn">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign-In Screen -->
+    <div id="sign-in-screen" class="screen">
+        <div class="container">
+            <div class="logo-container">
+                <img src="your-logo-path.png" alt="Beyond Code Logo" class="logo">
+            </div>
+            <h1 class="sign-in-text">SIGN IN</h1>
+            <div class="input-container">
+                <label for="username">User Name</label>
+                <input type="text" id="username" placeholder="Mohit">
+            </div>
+            <div class="input-container">
+                <label for="password">Password</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="********">
+                    <span class="toggle-password">&#128065;</span>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <button class="btn" id="sign-in-btn">Sign In</button>
+            </div>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+        </div>
+    </div>
+
+    <!-- Account Overview Screen -->
+    <div id="account-screen" class="screen">
+        <div class="container">
+            <div class="account-header">
+                <a href="#" class="back-arrow">←</a>
+                <span class="account-text">My Account</span>
+                <button class="edit-profile-btn">Edit Profile</button>
+            </div>
+            <div class="profile-image">
+                <img src="account-image.png" alt="Account Image">
+            </div>
+            <h2>The Ultimate Learning App</h2>
+            <p>Welcome to LearHub, the ultimate online course app that empowers you to unlock your potential.</p>
+            <button class="btn">Get Started</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
