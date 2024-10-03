@@ -1,28 +1,57 @@
-window.onload = function() {
-    // Reference to all screens
-    const welcomeScreen = document.getElementById('welcome-screen');
-    const signInScreen = document.getElementById('sign-in-screen');
-    const accountScreen = document.getElementById('account-screen');
+const goToSignInBtn = document.getElementById('goToSignInBtn');
+const goToSignUpBtn = document.getElementById('goToSignUpBtn');
+const signInBtn = document.getElementById('signInBtn');
+const getStartedBtn = document.getElementById('getStartedBtn');
+const jsLesson = document.getElementById('jsLesson');
+const runCodeBtn = document.getElementById('runCodeBtn');
+const nextBtn = document.getElementById('nextBtn');
+const output = document.getElementById('output');
 
-    // Show welcome screen for 3 seconds, then sign-in screen for 3 seconds, and finally account screen
-    setTimeout(function() {
-        welcomeScreen.classList.remove('active');
-        signInScreen.classList.add('active');
-    }, 3000);  // Adjust the delay time for welcome screen
+const page1 = document.getElementById('page1');
+const page2 = document.getElementById('page2');
+const page3 = document.getElementById('page3');
+const page4 = document.getElementById('page4');
+const page5 = document.getElementById('page5');
 
-    setTimeout(function() {
-        signInScreen.classList.remove('active');
-        accountScreen.classList.add('active');
-    }, 6000);  // Adjust the delay time for sign-in screen
-};
+function showPage(pageToShow) {
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+    pageToShow.classList.add('active');
+}
 
-// Toggle password visibility
-const togglePassword = document.querySelector('.toggle-password');
-const passwordField = document.getElementById('password');
-
-togglePassword.addEventListener('click', function() {
-    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordField.setAttribute('type', type);
-    // Optionally change the icon
-    this.textContent = type === 'password' ? '👁️' : '🙈';
+goToSignInBtn.addEventListener('click', () => {
+    showPage(page2); 
 });
+
+signInBtn.addEventListener('click', () => {
+    showPage(page3); 
+});
+
+getStartedBtn.addEventListener('click', () => {
+    showPage(page4); 
+});
+
+jsLesson.addEventListener('click', () => {
+    showPage(page5); 
+});
+
+runCodeBtnone.addEventListener('click', () => {
+    const result = "hello";
+    output.textContent = result;
+});
+
+nextBtn.addEventListener('click', () => {
+    showPage(page6);
+});
+
+runCodeBtntwo.addEventListener('click', () => {
+    const result = "hello World";
+    outputagain.textContent = result;
+});
+
+FinishBtn.addEventListener('click', () => {
+    alert('Quiz Completed!');
+});
+
+showPage(page1);
