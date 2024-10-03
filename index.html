@@ -3,63 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beyond Code</title>
+    <title>Collaborative Coding Environment</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Welcome Screen -->
-    <div id="welcome-screen" class="screen active">
-        <div class="container">
-            <div class="logo-container">
-                <img src="your-logo-path.png" alt="Beyond Code Logo" class="logo">
-            </div>
-            <h1 class="welcome-text">WELCOME</h1>
-            <div class="buttons-container">
-                <a href="#" class="btn">Sign In</a>
-                <a href="#" class="btn">Sign Up</a>
-            </div>
+
+    <div id="page1" class="page active">
+        <div class="content">
+            <img src="image 1.png" alt="Welcome Image" class="header-image">
+            <h1>Welcome to BeyondCode</h1>
+            <button id="goToSignInBtn" class="btn">Sign In</button>
+            <button id="goToSignUpBtn" class="btn">Sign Up</button>
         </div>
     </div>
 
-    <!-- Sign-In Screen -->
-    <div id="sign-in-screen" class="screen">
-        <div class="container">
-            <div class="logo-container">
-                <img src="your-logo-path.png" alt="Beyond Code Logo" class="logo">
-            </div>
-            <h1 class="sign-in-text">SIGN IN</h1>
-            <div class="input-container">
-                <label for="username">User Name</label>
-                <input type="text" id="username" placeholder="Mohit">
-            </div>
-            <div class="input-container">
-                <label for="password">Password</label>
-                <div class="password-wrapper">
-                    <input type="password" id="password" placeholder="********">
-                    <span class="toggle-password">&#128065;</span>
+    <div id="page2" class="page">
+        <div class="content">
+            <img src="image 1.png" alt="Sign In Image" class="header-image">
+            <h2>Sign In</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button id="signInBtn" class="btn">Login</button>
+        </div>
+    </div>
+
+    <div id="page3" class="page">
+        <div class="content">
+            <img src="image 1.png" alt="Dashboard Image" class="header-image">
+            <h2>My Account</h2>
+            <p>Welcome to your dashboard!</p>
+            <button id="getStartedBtn" class="btn">Get Started</button>
+        </div>
+    </div>
+
+    <div id="page4" class="page">
+        <div class="content">
+            <img src="image 1.png" alt="Course Dashboard Image" class="header-image">
+            <h2>Hi Mohit, Let's Start Learning</h2>
+            <input type="text" placeholder="Search for Course or Mentor" class="search-bar">
+            
+
+            <div class="course-section">
+                <h3>Popular Courses</h3>
+                <div class="course-list">
+                    <div class="course-card" id="jsLesson">
+                        <img src="C JAVA image.png" alt="JavaScript Lesson">
+                        <p>JavaScript Lesson</p>
+                    </div>
+                    <div class="course-card">
+                        <img src="C JAVA image.png" alt="C Programming">
+                        <p>C Programming</p>
+                    </div>
                 </div>
             </div>
-            <div class="buttons-container">
-                <button class="btn" id="sign-in-btn">Sign In</button>
+            <div class="mentor-section"></div>
+                <h3>Top Mentors</h3>
+                <div class="mentor-list">
+                    <div class="mentor-card">
+                        <img src="mentor.png" alt="Mentor Johnson">
+                        <span>Johnson</span>
+                    </div>
+                    <div class="mentor-card">
+                        <img src="mentor.png" alt="Mentor Parker">
+                        <span>Parker</span>
+                    </div>
+                    <div class="mentor-card">
+                        <img src="mentor.png" alt="Mentor Williams">
+                        <span>Williams</span>
+                    </div>
+                    <div class="mentor-card">
+                        <img src="mentor.png" alt="Mentor Robertson">
+                        <span>Robertson</span>
+                    </div>
+                </div>
             </div>
-            <a href="#" class="forgot-password">Forgot Password?</a>
         </div>
     </div>
 
-    <!-- Account Overview Screen -->
-    <div id="account-screen" class="screen">
-        <div class="container">
-            <div class="account-header">
-                <a href="#" class="back-arrow">←</a>
-                <span class="account-text">My Account</span>
-                <button class="edit-profile-btn">Edit Profile</button>
+    <div id="page5" class="page">
+        <div class="content">
+            <h2>JavaScript Quiz</h2>
+            <p>1. In this exercise, we create a function called `func`. Use <code>console.log()</code> to log the text <strong>"hello world"</strong>.</p>
+            
+            <div class="code-box">
+                <pre>
+                    function func() {
+                        return "hello";
+                    }
+                    const result = func();
+                    console.log(result);
+                </pre>
             </div>
-            <div class="profile-image">
-                <img src="account-image.png" alt="Account Image">
+            <button id="runCodeBtnone" class="btn">Run</button>
+
+            <div class="output-box">
+                <p id="output"></p>
             </div>
-            <h2>The Ultimate Learning App</h2>
-            <p>Welcome to LearHub, the ultimate online course app that empowers you to unlock your potential.</p>
-            <button class="btn">Get Started</button>
+            <button id="nextBtn" class="btn">Next...</button>
+        </div>
+    </div>
+
+    <div id="page6" class="page">
+        <div class="content">
+            <h2>JavaScript Quiz</h2>
+            <p>1. In this exercise, we create a function called `func`. Use <code>console.log()</code> to log the text <strong>"hello world"</strong>.</p>
+            
+            <div class="code-box">
+                <pre>
+                    function func() {
+                        return "hello world";
+                    }
+                    const result = func();
+                    console.log(result);
+                </pre>
+            </div>
+            <button id="runCodeBtntwo" class="btn">Run</button>
+
+            <div class="outputagain-box">
+                <p id="outputagain"></p>
+            </div>
+            <button id="FinishBtn" class="btn">Finish</button>
         </div>
     </div>
 
